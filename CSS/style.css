@@ -1,0 +1,15 @@
+:root {
+    --color-fondo: #F3F5FC;
+}
+
+body {
+    background-color: var(--color-fondo);
+}
+
+.contenido__textarea {
+    border: none;
+    resize: none;
+    background-color: var(--color-fondo);
+    margin-top: 168px;
+    margin-left: 240px;
+}
