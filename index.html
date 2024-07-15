@@ -9,31 +9,37 @@
 </head>
 <body>
     <main>
-        <div class="contenido">
-            <img src="Imagenes/Logo.png" alt="Logo de Alura" class="contenido__logo">
-            <textarea name="entradaTexto" id="entradaTexto" class="contenido__textarea" placeholder="Ingrese el texto aqui"></textarea>
-            <div class="contenido__encrip-desencrip">
-                <textarea name="salidaTexto" id="salidaTexto" class="contenido__encrip-desencrip__textarea"></textarea>
-                <img src="Imagenes/Muñeco.png" alt="Muñeco">
-                <div class="contenido__encrip-desencrip__mensajes">
-                    <h3 class="contenido__encrip-desencrip__mensajes__tituloDeNoEncontrado">
-                        Ningún mensaje fue encontrado
-                    </h3>
-                    <p class="contenido__encrip-desencrip__mensajes__parrafoDeNoEncontrado">
-                        Ingresa el texto que desees encriptar o desencriptar.
-                    </p>
+        <div>
+            <div class="contenido">
+                <img src="Imagenes/Logo.png" alt="Logo de Alura" class="logo">
+                <textarea name="entradaTexto" id="entradaTexto" class="contenido__textarea" placeholder="Ingrese el texto aqui"></textarea>
+                <div class="contenido__encrip-desencrip">
+                    <textarea name="salidaTexto" id="salidaTexto" class="contenido__encrip-desencrip__textarea" readonly>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A quasi exercitationem totam excepturi voluptate fuga quibusdam id possimus, porro aspernatur nisi. Quidem eveniet quia accusantium saepe. Eligendi iusto voluptate nesciunt?</textarea>
+                    <img src="Imagenes/Muñeco.png" alt="Muñeco" class="contenido__botones__desencrip__muneco">
+                    <div class="contenido__encrip-desencrip__mensajes">
+                        <h3>
+                            Ningún mensaje fue encontrado
+                        </h3>
+                        <p>
+                            Ingresa el texto que desees encriptar o desencriptar.
+                        </p>
+                    </div>
+                    <button class="contenido__copiar">Copiar</button>
                 </div>
             </div>
-            <p> ❗ Solo letras minúsculas y sin acentos</p>
             <div class="contenido__botones">
-                <button class="contenido__botones__encrip">Encriptar</button>
-                <button class="contenido__botones__desencrip">Desencriptar</button>
+                <p> ❗ Solo letras minúsculas y sin acentos</p>
+                <div class="contenido__botones2">
+                    <button class="contenido__botones__encrip">Encriptar</button>
+                    <button class="contenido__botones__desencrip">Desencriptar</button>
+                </div>
             </div>
         </div>
     </main>
-
+<!--
     <footer>
         <p>Todos los derechos reservados - Gabriel Carrillo.</p>
     </footer>
+-->
 </body>
 </html>
