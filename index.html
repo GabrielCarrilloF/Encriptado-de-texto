@@ -15,8 +15,8 @@
                 <textarea name="entradaTexto" id="entradaTexto" class="contenido__textarea" placeholder="Ingrese el texto aqui"></textarea>
                 <div class="contenido__encrip-desencrip">
                     <textarea name="salidaTexto" id="salidaTexto" class="contenido__encrip-desencrip__textarea" readonly>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A quasi exercitationem totam excepturi voluptate fuga quibusdam id possimus, porro aspernatur nisi. Quidem eveniet quia accusantium saepe. Eligendi iusto voluptate nesciunt?</textarea>
-                    <img src="Imagenes/Muñeco.png" alt="Muñeco" class="contenido__botones__desencrip__muneco">
-                    <div class="contenido__encrip-desencrip__mensajes">
+                    <div id="encripDesencripMensajes" class="contenido__encrip-desencrip__mensajes">
+                        <img src="Imagenes/Muñeco.png" alt="Muñeco" class="contenido__botones__desencrip__muneco">
                         <h3>
                             Ningún mensaje fue encontrado
                         </h3>
@@ -24,13 +24,13 @@
                             Ingresa el texto que desees encriptar o desencriptar.
                         </p>
                     </div>
-                    <button class="contenido__copiar">Copiar</button>
+                    <button id="btnCopiar" class="contenido__copiar">Copiar</button>
                 </div>
             </div>
             <div class="contenido__botones">
                 <p> ❗ Solo letras minúsculas y sin acentos</p>
                 <div class="contenido__botones2">
-                    <button class="contenido__botones__encrip">Encriptar</button>
+                    <button onclick="btnEncriptar();" class="contenido__botones__encrip">Encriptar</button>
                     <button class="contenido__botones__desencrip">Desencriptar</button>
                 </div>
             </div>
@@ -41,5 +41,7 @@
         <p>Todos los derechos reservados - Gabriel Carrillo.</p>
     </footer>
 -->
+
+<script src="JS/encriptar.js"></script>
 </body>
 </html>
