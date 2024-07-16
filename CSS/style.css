@@ -4,6 +4,9 @@
     --color-fondo: #F3F5FC;
     --color-primario: #0A3871;
     --color-azulbajo: #D8DFE8;
+    --color-blanco: #FFFFFF;
+
+    --fuente-inetr: "Inter", sans-serif;
 }
 
 body {
@@ -34,7 +37,7 @@ body {
     background-color: var(--color-fondo);
     color: var(--color-primario);
     font-size: 32px;
-    font-family: "Inter", sans-serif;
+    font-family: var(--fuente-inetr);
     width: 577px;
     height: 355px;
     margin-top: 104px;
@@ -45,7 +48,7 @@ body {
 }
 
 .contenido__encrip-desencrip {
-    background-color: #FFFFFF;
+    background-color: var(--color-blanco);
     margin-top: 40px;
     margin-right: 40px;
     margin-bottom: 40px;
@@ -57,7 +60,7 @@ body {
 }
 
 .contenido__encrip-desencrip__textarea {
-    display: none;
+    display: none; 
 
     margin-top: 32px;
     margin-left: 32px;
@@ -68,7 +71,7 @@ body {
     width: 256px;
     height: 399px;
     font-size: 24px;
-    font-family: "Inter", sans-serif;
+    font-family: var(--fuente-inetr);
     color: #495057;    
 }
 
@@ -78,12 +81,14 @@ body {
     margin-right: 32px;
     margin-bottom: 32px;
     
+
 }
 
 .contenido__encrip-desencrip__mensajes {
     justify-content: center;
     width: 100%;
     
+
 }
 
 .contenido__encrip-desencrip__mensajes h3 {
@@ -91,7 +96,7 @@ body {
     font-size: 24px;
     margin-left: 32px;
     margin-right: 32px;
-    font-family: "Inter", sans-serif;
+    font-family: var(--fuente-inetr);
 }
 
 .contenido__encrip-desencrip__mensajes p {
@@ -99,11 +104,11 @@ body {
     font-size: 16px;
     margin-left: 32px;
     margin-right: 32px;
-    font-family: "Inter", sans-serif;
+    font-family: var(--fuente-inetr);
 }
 
 .contenido__copiar {
-    display: none;
+    display: none; 
 
     width: 256px;
     height: 67px;
@@ -111,10 +116,10 @@ body {
     text-align: center;
     color: var(--color-primario);
     font-size: 16px;
-    font-family: "Inter", sans-serif;
+    font-family: var(--fuente-inetr);
     border-radius: 24px;
     border: solid  1px var(--color-primario);
-    background-color: #FFFFFF;
+    background-color: var(--color-blanco);
     margin-right: 32px;
     margin-left: 32px;
     margin-bottom: 32px;
@@ -134,7 +139,7 @@ body {
 
 .contenido__botones p {
     font-size: 12px;
-    font-family: "Inter", sans-serif;
+    font-family: var(--fuente-inetr);
     color: #495057;
 }
 
@@ -144,9 +149,9 @@ body {
     height: 67px;
     padding: 24px;
     text-align: center;
-    color: #FFFFFF;
+    color: var(--color-blanco);
     font-size: 16px;
-    font-family: "Inter", sans-serif;
+    font-family: var(--fuente-inetr);
     border-radius: 24px;
     background-color: var(--color-primario);
     margin-right: 24px;
@@ -159,9 +164,170 @@ body {
     text-align: center;
     color: var(--color-primario);
     font-size: 16px;
-    font-family: "Inter", sans-serif;
+    font-family: var(--fuente-inetr);
     border-radius: 24px;
     border: solid  1px var(--color-primario);
     background-color: var(--color-azulbajo);
     margin-right: 24px;
+}
+
+/* Estilos específicos para tablets */
+@media (min-width: 768px) and (max-width: 1200px) {
+
+    body {
+        overflow: auto;
+    }
+
+    .contenido {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-top: 73.42px;
+        margin-left: 40px;
+    }
+
+    .contenido__textarea {
+        width: 688px;
+        height: 355px;
+        margin-top: 116px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .contenido__botones p {
+        width: 229px;
+        height: 18px;
+    }
+
+    .contenido__botones {
+        position: absolute;
+        top: 610px; 
+        left: 40px; 
+        right: 520px;
+        width: 688px;
+
+    }
+
+    .contenido__botones__encrip {
+        width: 338px;
+        height: 67px;
+    }
+
+    .contenido__botones__desencrip {
+        width: 338px;
+        height: 67px;
+    }
+
+    .contenido__encrip-desencrip {
+        display: flex;
+        flex-direction: column;
+        margin-top: 150px;
+        margin-left: 40px;
+        margin-right: 40px;
+        width: 688px;
+        height: 133%;
+    }
+
+    .contenido__botones__desencrip__muneco {
+        display: none;
+    }
+
+    .contenido__encrip-desencrip__mensajes p {
+        margin-bottom: 32px;
+    }
+
+    .contenido__encrip-desencrip__textarea { 
+        width: 624px;
+        height: 179px;  
+    }
+
+    .contenido__copiar {
+        width: 624px;
+    }
+}
+
+/* Estilos específicos para telefono */
+@media only screen and (max-width: 767px) {
+
+    body {
+        overflow: auto;
+    }
+
+    .contenido {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-top: 24px;
+        margin-left: 24px;
+    }
+
+    .contenido__textarea {
+        width: 343px;
+        height: 355px;
+        margin-top: 56px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .contenido__botones p {
+        width: 229px;
+        height: 18px;
+    }
+
+    .contenido__botones {
+        position: absolute;
+        top: 510px; 
+        left: 16px; 
+        right: 16px;
+        width: 343px;
+        height: 158px;
+
+    }
+
+    .contenido__botones2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenido__botones__encrip {
+        width: 343px;
+        height: 67px;
+        margin-bottom: 24px;
+    }
+
+    .contenido__botones__desencrip {
+        width: 343px;
+        height: 67px;
+    }
+
+    .contenido__encrip-desencrip {
+        display: flex;
+        flex-direction: column;
+        margin-top: 320px;
+        margin-left: 16px;
+        margin-right: 16px;
+        width: 343px;
+        height: 595%;
+    }
+
+    .contenido__botones__desencrip__muneco {
+        display: none;
+    }
+
+    .contenido__encrip-desencrip__mensajes p {
+        margin-bottom: 32px;
+    }
+
+    .contenido__encrip-desencrip__textarea { 
+        width: 279px;
+        height: 179px;  
+    }
+
+    .contenido__copiar {
+        width: 279px;
+    }
 }
