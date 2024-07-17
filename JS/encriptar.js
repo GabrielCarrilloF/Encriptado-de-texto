@@ -22,6 +22,17 @@ function btnEncriptar(){
     return texto;
 }
 
+function copiarTexto() {
+    textareaSalida.select();
+    textareaSalida.setSelectionRange(0, 99999);
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+
+    var x = document.getElementById("toast");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
 function mostrarResultado()  {
     textareaSalida.style.display = 'block';
     botonCopiar.style.display = 'block';
