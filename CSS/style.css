@@ -75,6 +75,10 @@ body {
     color: #495057;    
 }
 
+.contenido__encrip-desencrip__textarea:hover {
+    cursor: context-menu;
+}
+
 .contenido__botones__desencrip__muneco {
     margin-top: 95px;
     margin-left: 32px;
@@ -126,6 +130,11 @@ body {
     margin-top: 32px;
 }
 
+.contenido__copiar:hover {
+    cursor: pointer;
+}
+
+
 .contenido__botones {
     position: absolute;
     top: 500px; 
@@ -157,6 +166,10 @@ body {
     margin-right: 24px;
 }
 
+.contenido__botones__encrip:hover {
+    cursor: pointer;
+}
+
 .contenido__botones__desencrip {
     width: 328px;
     height: 67px;
@@ -169,6 +182,10 @@ body {
     border: solid  1px var(--color-primario);
     background-color: var(--color-azulbajo);
     margin-right: 24px;
+}
+
+.contenido__botones__desencrip:hover {
+    cursor: pointer;
 }
 
 /* Estilos específicos para tablets */
