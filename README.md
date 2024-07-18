@@ -68,10 +68,6 @@ También puedes usar la aplicación directamente desde [GitHub Pages](https://ga
 - **CSS3**: Para el diseño y la apariencia.
 - **JavaScript**: Para la lógica de encriptación y desencriptación.
 
-## Personas Contribuyentes
-
-- [Nombre del Contribuyente 1](https://github.com/usuario1)
-- [Nombre del Contribuyente 2](https://github.com/usuario2)
 
 ## Personas Desarrolladoras del Proyecto
 
