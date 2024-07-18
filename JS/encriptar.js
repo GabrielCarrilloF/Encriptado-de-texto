@@ -3,23 +3,42 @@ let textareaSalida = document.getElementById('salidaTexto');
 let botonCopiar = document.getElementById('btnCopiar');
 let mensajes = document.getElementById('encripDesencripMensajes');
 
+
 function btnEncriptar(){
+    let texto = extraerTexto();
+    if (texto != false) {
+        mostrarResultado();
+        textareaSalida.value = encriptar(texto);
+    }
+}
+
+
+
+function btnDesencriptar() {
+    let texto = extraerTexto();
+    if (texto != false) {
+        mostrarResultado();
+        textareaSalida.value = desencriptar(texto);
+    }
+}
+
+function extraerTexto() {
     let texto = textareaEntrada.value;
 
     texto = texto.toLowerCase();
 
     if (texto == '') {
         limpiar();
+        mostrarToast('Por favor, ingresa tu texto');
+        return false;
     }else{
-        mostrarResultado();
         if (!validaAcento(texto)) {
-            textareaSalida.value = encriptar(texto);
+            return texto;
         }else {
-            textareaSalida.value = '¡Oops! Ocurrió un error :(';
+            mostrarToast('¡Oops! Sin acentos');
+            return false;
         }
     }
-
-    return texto;
 }
 
 function copiarTexto() {
@@ -27,6 +46,14 @@ function copiarTexto() {
     textareaSalida.setSelectionRange(0, 99999);
     document.execCommand('copy');
     window.getSelection().removeAllRanges();
+
+    mostrarToast('Texto copiado');
+}
+
+function mostrarToast(mensaje) {
+    let toast = document.getElementById('toast');
+
+    toast.textContent = mensaje;
 
     var x = document.getElementById("toast");
     x.className = "show";
@@ -47,42 +74,30 @@ function limpiar(){
 }
 
 function validaAcento(texto){
-    const acentos = /[áéíóúü]/i;
+    const acentos = /[ÄËÏÖÜáéíóúäëïöü]/i;
   return acentos.test(texto);
 }
 
 function encriptar(texto){
-    let tamTexto = texto.length;
-    let letras = [];
-    let posicionVocal = [];
-    let textoEncriptado = '';
-    const vocales = /[aeiou]/i;
+    const reemplazos = {
+        'a': 'ai',
+        'e': 'enter',
+        'i': 'imes',
+        'o': 'ober',
+        'u': 'ufat'
+      };
+    
+    return texto.replace(/a|e|i|o|u/g, (match) => reemplazos[match]);
+}
 
-
-    for (i = 0; i<tamTexto; i++) {
-        letras.push(texto[i]);
-        if (vocales.test(texto[i])) {
-            posicionVocal.push(i);
-        } 
-    }
-
-    for (i = 0; i<posicionVocal.length; i++) {
-        if (letras[posicionVocal[i]] == 'a') {
-            letras[posicionVocal[i]] = 'ai';
-        } else if (letras[posicionVocal[i]] == 'e') {
-            letras[posicionVocal[i]] = 'enter';
-        } else if (letras[posicionVocal[i]] == 'i') {
-            letras[posicionVocal[i]] = 'imes';
-        } else if (letras[posicionVocal[i]] == 'o') {
-            letras[posicionVocal[i]] = 'ober';
-        } else if (letras[posicionVocal[i]] == 'u') {
-            letras[posicionVocal[i]] = 'ufat';
-        }
-    }
-
-    for (i = 0; i<letras.length; i++) {
-        textoEncriptado = textoEncriptado + letras[i];
-    }
-
-    return textoEncriptado;
+function desencriptar(texto) {
+    const reemplazos = {
+        'ai': 'a',
+        'enter': 'e',
+        'imes': 'i',
+        'ober': 'o',
+        'ufat': 'u'
+      };
+    
+    return texto.replace(/ai|enter|imes|ober|ufat/g, (match) => reemplazos[match]);
 }
