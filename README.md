@@ -42,15 +42,15 @@ El proyecto está en desarrollo. Se están agregando nuevas funcionalidades y me
 
 ### Pantalla Principal
 
-![Pantalla Principal](ruta/a/imagen1.png)
+![Pantalla Principal](Imagenes/Principal.png)
 
 ### Texto Encriptado
 
-![Texto Encriptado](ruta/a/imagen2.png)
+![Texto Encriptado](Imagenes/Encriptando.png)
 
 ### Texto Desencriptado
 
-![Texto Desencriptado](ruta/a/imagen3.png)
+![Texto Desencriptado](Imagenes/Desencriptando.png)
 
 ## Acceso al Proyecto
 
